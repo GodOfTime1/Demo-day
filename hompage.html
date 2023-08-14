@@ -1,73 +1,73 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" id="logo" href="logo.png">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" id="logo" href="logo.png" />
     <title>Home page</title>
-    <link rel="stylesheet" href="style.css">
-    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
-    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      defer
+      src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"
+    ></script>
+    <script
+      defer
+      src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"
+    ></script>
     <script defer src="firebase.js"></script>
     <script defer src="script.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <!-- nav bar -->
     <div>
-        <nav>
-            <!-- Logo -->
-            <a href="hompage.html"><img id='logo' src="logo.png"></a>
-            <!-- Women database -->
-            <div id="Women"><a href="women.html">Women</a></div>
-            <!-- Men database -->
-            <div id="Men"><a href="men.html">Men</a>></div>
-            <div id="login"><a href="login.html">Login/Register</a></div>
-            <div id="profile"><a href="personal_info/edit_info.html">profile</a></div>
-        </nav>
+      <nav>
+        <!-- Logo -->
+        <a href="hompage.html"><img id="logo" src="logo.png" /></a>
+        <!-- Women database -->
+        <div id="Women"><a href="men&women/women.html">Women</a></div>
+        <!-- Men database -->
+        <div id="Men"><a href="men&women/men.html">Men</a></div>
+        <div id="login"><a href="login.html">Login/Register</a></div>
+        <div id="profile">
+          <a href="personal_info/edit_info.html">profile</a>
+        </div>
+      </nav>
     </div>
     <div id="search">
-        <form>
-            <input type="text" id="frame" placeholder="list topic"><br><br>
-        </form>
-        <!-- menu  -->
-        <select name="" id="preference">
-            <option value="Women">Women</option>
-            <option value="Men">Men</option>
-        </select>
-        <button id="confirm_button">Confirm</button>
+      <form>
+        <input type="text" id="frame" placeholder="list topic" /><br /><br />
+      </form>
+      <!-- menu  -->
+      <select name="" id="preference">
+        <option value="Women">Women</option>
+        <option value="Men">Men</option>
+      </select>
+      <button id="confirm_button">Confirm</button>
     </div>
-    
+
     <div id="chatbox-container">
-    <h1 id="title">General Chat</h1>        
-    
-    <div id="all-messages">
-        </div>
-    
-        <div id="typing-container">
-            <form id="textbox">
-                <div class="input-container">
-                    <label>Username:</label>
-                    <input
-                        type="text"
-                        id="username"
-                     />
-                </div>
-                <div class="input-container">
-                    <label>Message:</label>
-                    <input
-                        type="text"
-                        id="message"
-                    />
-                </div>
-            </form>
-    
-            <button id="send-btn">Send</button>
-        </div>
-        <div class="list">
-            <div class="users"></div>
-            <div class="profile"></div>
-        </div>
+      <h1 id="title">General Chat</h1>
+
+      <div id="all-messages"></div>
+
+      <div id="typing-container">
+        <form id="textbox">
+          <div class="input-container">
+            <label>Username:</label>
+            <input type="text" id="username" />
+          </div>
+          <div class="input-container">
+            <label>Message:</label>
+            <input type="text" id="message" />
+          </div>
+        </form>
+
+        <button id="send-btn">Send</button>
+      </div>
+      <div class="list">
+        <div class="users"></div>
+        <div class="profile"></div>
+      </div>
     </div>
-</body>
+  </body>
 </html>

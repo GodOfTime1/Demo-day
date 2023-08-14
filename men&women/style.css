@@ -1,0 +1,15 @@
+/* backgroud color */
+#women_page {
+  background-color: pink;
+}
+#men_page {
+  background-color: aqua;
+}
+
+/* positions */
+#product {
+  display: flex;
+}
+img {
+  size: 10;
+}
