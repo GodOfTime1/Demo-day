@@ -1,15 +1,81 @@
 /* backgroud color */
 #women_page {
-  background-color: pink;
+  background-color: rgb(255, 210, 218);
 }
 #men_page {
-  background-color: aqua;
+  background-color: rgb(193, 255, 255);
 }
 
 /* positions */
 #product {
   display: flex;
+  
 }
 img {
-  size: 10;
+  width: 150px;
+}
+
+header {
+  background-color: blue;
+  color: #fff;
+  text-align: center;
+  
+}
+
+/* Navbar decorations */
+nav {
+  width: 100%;
+  padding: 10px;
+  font-size: x-large;
+  background-color: aliceblue;
+  display: flex;
+} 
+
+#logo {
+  width: 60px;
+  border-radius: 50%;
+}
+
+#Women {
+  margin-top: 10px;
+  margin-left: 50px;
+  margin-right: 100px;
+}
+
+#Men {
+  margin-top: 10px;
+  margin-right: 100px
+}
+
+#login {
+  margin-top: 10px;
+  margin-left: 1000px;
+}
+
+#frame {
+  width: 100%;
+  height: 30px;
+  margin-top: 20px;
+}
+
+#preference {
+  margin-top: 20px;
+  margin-left: 20px;
+  width: 100px;
+  height: 35px;
+}
+
+#confirm_button {
+  margin-top: 20px;
+  margin-left: 10px;
+  height: 35px;
+}
+
+#search {
+  display: flex;
+}
+
+#profile {
+  margin-top: 10px;
+  margin-left: 20px;
 }
