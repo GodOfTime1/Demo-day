@@ -1,10 +1,15 @@
-body{
-    background-color: blanchedalmond;
-    
+/* body {
+  background-color: blanchedalmond;
+} */
+
+body {
+  background: url(../logo.png);
 }
 
-
-
-.info{
-    display: block;
+form {
+  /* display: block; */
+  display: block;
+  text-align: center;
+  flex-direction: column;
+  /* justify-content: center; */
 }
