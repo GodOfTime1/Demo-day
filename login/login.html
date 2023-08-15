@@ -3,6 +3,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta charset="utf-8" />
   <title>Login / Sign Up Form</title>
+  <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore-compat.js"></script>
   <link rel="shortcut icon" href="/assets/favicon.ico" />
   <link rel="stylesheet" href="main.css" />
 </head>
@@ -33,7 +35,7 @@
           />
           <div class="form__input-error-message"></div>
         </div>
-        <button class="form__button" id="login_button">Continue</button>
+        <button class="form__button" id="login_button" type="submit">Continue</button>
         <p class="form__text">
           <a href="#" class="form__link">Forgot your password?</a>
         </p>
@@ -83,7 +85,7 @@
           />
           <div class="form__input-error-message"></div>
         </div>
-        <button id="form_button">Continue</button>
+        <button id="form_button" type="submit">Continue</button>
         <p class="form__text">
           <a class="form__link" href="./" id="linkLogin"
             >Already have an account? Sign in</a>
@@ -91,6 +93,7 @@
       </form>
     </div>
   </div>
+  <script src="../firebase.js"></script>
   <script src="main.js"></script>
 </body>
 </html>

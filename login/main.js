@@ -1,18 +1,32 @@
 // <<<<<<< HEAD
+const user_db = firebase.firestore();
 const username_field = document.getElementById("user_username");
 const password_field = document.getElementById("user_userpassword");
+// Login Button
 const submit_BTN = document.getElementById("login_button");
-
-console.log(username_field);
-console.log(password_field);
-console.log(submit_BTN);
+// Create Account Button
+const create_BTN = document.getElementById("form_button");
+let userRef = user_db.collection("users");
+userRef.doc("user1").set({
+  username: "abc123",
+  password: "abc123",
+});
+// login page
 submit_BTN.onclick = (e) => {
+  e.preventDefault();
+  console.log(user_db.collection("users").doc("user1"));
+  userRef
+    .doc("user1")
+    .get()
+    .then((doc) => {
+      console.log(doc.data());
+    });
+};
+// create account pa)ge
+create_BTN.onclick = (e) => {
   e.preventDefault();
   console.log("this is working");
 };
-// submit_BTN.onsubmit = (event) => {
-//   event.preventDefault();
-// };
 
 function setFormMessage(formElement, type, message) {
   const messageElement = formElement.querySelector(".form__message");
@@ -70,11 +84,11 @@ document.addEventListener("DOMContentLoaded", () => {
       if (
         e.target.id === "signupUsername" &&
         e.target.value.length > 0 &&
-        e.target.value.length < 10
+        e.target.value.length < 4
       ) {
         setInputError(
           inputElement,
-          "Username must be at least 10 characters in length"
+          "Username must be at least 4 characters in length"
         );
       }
     });
