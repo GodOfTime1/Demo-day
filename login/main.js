@@ -1,31 +1,83 @@
-// <<<<<<< HEAD
+// Datebase
 const user_db = firebase.firestore();
+// user input FOR LOGGING IN
 const username_field = document.getElementById("user_username");
 const password_field = document.getElementById("user_userpassword");
+
+// USER INPUT FOR MAKING AN ACCOUNT
+const createusername_field = document.getElementById("signupUsername");
+const createpassword_field = document.getElementById("signupPassword");
+const confirmcreatepassword_field = document.getElementById("confirmpassword");
+console.log(confirmcreatepassword_field);
 // Login Button
-const submit_BTN = document.getElementById("login_button");
+const login_BTN = document.getElementById("login_button");
+
 // Create Account Button
 const create_BTN = document.getElementById("form_button");
 let userRef = user_db.collection("users");
-userRef.doc("user1").set({
-  username: "abc123",
-  password: "abc123",
-});
-// login page
-submit_BTN.onclick = (e) => {
+
+// logging in
+login_BTN.onclick = (e) => {
   e.preventDefault();
-  console.log(user_db.collection("users").doc("user1"));
-  userRef
-    .doc("user1")
-    .get()
-    .then((doc) => {
-      console.log(doc.data());
+
+  let arrayOfAllUsers = [];
+  let arrayOfAllPasswords = [];
+  // user input
+  const username = username_field.value;
+  const password = password_field.value;
+  //  get all the documents
+  userRef.get().then((querySnapshot) => {
+    querySnapshot.forEach((doc) => {
+      const data = doc.data();
+      arrayOfAllUsers.push(data.username);
+      arrayOfAllPasswords.push(data.password);
     });
+
+    for (let i = 0; i < arrayOfAllUsers.length; i++) {
+      if (
+        arrayOfAllUsers[i] == username &&
+        arrayOfAllPasswords[i] == password
+      ) {
+        window.location.href = "../index.html";
+        break;
+      } else {
+        // check if all users have been checked
+        if (i == arrayOfAllUsers - 1) {
+          alert("Please enter your correct credentials.");
+        }
+      }
+    }
+  });
 };
-// create account pa)ge
+
+// create account page
+
 create_BTN.onclick = (e) => {
   e.preventDefault();
-  console.log("this is working");
+
+  let username = createusername_field.value;
+  let password = createpassword_field.value;
+  let confirmpassword = confirmcreatepassword_field.value;
+
+  if (password == confirmpassword) {
+    userRef
+      .add({
+        username: username,
+        password: password,
+      })
+      .then((userRef) => {
+        console.log("you created the account!");
+        createusername_field.value = "";
+        createpassword_field.value = "";
+        confirmcreatepassword_field.value = "";
+      })
+      .catch((err) => {
+        alert("sorry something went wrong");
+        location.reload();
+      });
+  } else {
+    alert("Please enter your password correctly.");
+  }
 };
 
 function setFormMessage(formElement, type, message) {
