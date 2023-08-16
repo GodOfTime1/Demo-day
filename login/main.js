@@ -11,11 +11,11 @@ const confirmcreatepassword_field = document.getElementById("confirmpassword");
 console.log(confirmcreatepassword_field);
 // Login Button
 const login_BTN = document.getElementById("login_button");
-
+// checks if the user is currently logged in
+let userCurrentlyLoggedIn = false;
 // Create Account Button
 const create_BTN = document.getElementById("form_button");
 let userRef = user_db.collection("users");
-
 // logging in
 login_BTN.onclick = (e) => {
   e.preventDefault();
@@ -38,11 +38,12 @@ login_BTN.onclick = (e) => {
         arrayOfAllUsers[i] == username &&
         arrayOfAllPasswords[i] == password
       ) {
+        userCurrentlyLoggedIn = true;
         window.location.href = "../index.html";
         break;
       } else {
         // check if all users have been checked
-        if (i == arrayOfAllUsers - 1) {
+        if (i == arrayOfAllUsers.length - 1) {
           alert("Please enter your correct credentials.");
         }
       }
@@ -50,8 +51,7 @@ login_BTN.onclick = (e) => {
   });
 };
 
-// create account page
-
+// create account
 create_BTN.onclick = (e) => {
   e.preventDefault();
 
@@ -150,3 +150,4 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+

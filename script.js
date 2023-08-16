@@ -1,8 +1,3 @@
-// Firebase and cloud store
-// import firebase from "firebase/compat/app";
-// // Required for side-effects
-// import "firebase/firestore";
-
 const database = firebase.database().ref();
 
 const allMessages = document.getElementById("all-messages");
@@ -15,6 +10,8 @@ sendBtn.onclick = updateDB;
 const list = document.querySelector(".list");
 const users = document.querySelector(".users");
 const profiles = document.querySelector(".profiles");
+
+const link = document.getElementById("login_home");
 
 // edit_info.html
 const profile_info = document.getElementsByClassName("info");
@@ -88,42 +85,8 @@ formElem.onkeyup = (event) => {
 };
 
 // profile input
-let info = document.getElementsByClassName("info");
-const nickname = document.getElementById("nickname");
-const age = document.getElementById("age");
-const position = document.getElementById("position");
-const experience = document.getElementById("experience");
-//
-//
-// Adding Data
-// var docData = {
-//   //   stringExample: "Hello world!",
-//   //   booleanExample: true,
-//   //   numberExample: 3.14159265,
-//   //   dateExample: firebase.firestore.Timestamp.fromDate(
-//   //     new Date("December 10, 1815")
-//   //   ),
-//   //   arrayExample: [5, true, "hello"],
-//   //   nullExample: null,
-//   //   objectExample: {
-//   //     a: 5,
-//   //     b: {
-//   //       nested: "foo",
-//   //     },
-//   //   },
-// };
-// db.collection("data")
-//   .doc("one")
-//   .set(docData)
-//   .then(() => {
-//     console.log("Document successfully written!");
-//   });
-
-// // Allow read/write access on all documents to any user signed in to the application
-// // service cloud.firestore {
-// //   match /databases/{database}/documents {
-// //     match /{document=**} {
-// //       allow read, write: if request.auth != null;
-// //     }
-// //   }
-// // }
+// let info = document.getElementsByClassName("info");
+// const nickname = document.getElementById("nickname");
+// const age = document.getElementById("age");
+// const position = document.getElementById("position");
+// const experience = document.getElementById("experience");
