@@ -13,7 +13,7 @@ header {
 nav {
   width: 100%;
   padding: 10px;
-  font-size: large;
+  font-size: x-large;
   background-color: aliceblue;
   display: flex;
 }
@@ -31,12 +31,12 @@ nav {
 
 #Men {
   margin-top: 10px;
-  margin-right: 100px;
+  margin-right: 1000px;
 }
 
 #login {
   margin-top: 10px;
-  margin-left: auto;
+  margin-left: 100px;
 }
 
 #frame {
