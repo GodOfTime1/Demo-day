@@ -39,7 +39,7 @@ login_BTN.onclick = (e) => {
         arrayOfAllPasswords[i] == password
       ) {
         userCurrentlyLoggedIn = true;
-        window.location.href = "../index.html";
+        window.location.href = "homepage/homepage.html";
         break;
       } else {
         // check if all users have been checked
