@@ -6,20 +6,41 @@
     <title>info</title>
     <link rel="stylesheet" href="info.css" />
     <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-database-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore-compat.js"></script>
+    <script src="../firebase.js" defer></script>
+    <script defer src="../homepage/script.js"></script>
   </head>
-  <a href="../homepage/homepage.html">homepage</a>
-  <form>
-    <input type="text" id="nickname" class="info" placeholder="nickname" />
-    <input type="number" id="age" class="info" placeholder="age" />
-    <input type="text" id="position" class="info" placeholder="position" />
-    <input
-      type="text"
-      id="experience"
-      class="info"
-      placeholder="work out experience"
-    />
-  </form>
-  <script src="../homepage/script.js"></script>
-  <body></body>
+  <body>
+    <div>
+      <nav>
+        <!-- Logo -->
+        <a href="../homepage/homepage.html"
+          ><img id="logo" src="../logo1.png"
+        /></a>
+        <!-- Women database -->
+        <div id="Women"><a href="../men&women/women.html">Women</a></div>
+        <!-- Men database -->
+        <div id="Men"><a href="../men&women/men.html">Men</a></div>
+        <div><a id="login_home" href="../index.html">Login/Register</a></div>
+        <div id="profile">
+          <a href="../personal_info/edit_info.html">profile</a>
+        </div>
+      </nav>
+    </div>
+    <div id="information">
+      <form>
+        <input type="text" id="nickname" class="info" placeholder="nickname" />
+        <input type="number" id="age" class="info" placeholder="age" />
+        <input type="text" id="position" class="info" placeholder="position" />
+        <input
+          type="text"
+          id="experience"
+          class="info"
+          placeholder="work out experience"
+        />
+        <button class="info">Enter</button>
+      </form>
+    </div>
+  </body>
 </html>

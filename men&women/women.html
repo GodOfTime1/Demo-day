@@ -7,7 +7,11 @@
     <link rel="icon" id="logo" href="logo.png">
     <title>Home page</title>
     <link rel="stylesheet" href="style.css">
-    <script defer src="../script.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-database-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore-compat.js"></script>
+    <script src="../firebase.js"></script>
+    <script defer src="../homepage/script.js"></script>
 </head>
 <body id="women_page">
     <!-- nav bar -->
@@ -19,7 +23,7 @@
             <div id="Women"><a href="women.html">Women</a></div>
             <!-- Men database -->
             <div id="Men"><a href="men.html">Men</a></div>
-            <div id="login"><a href="../index.html">Login/Register</a></div>
+            <div ><a id="login_home" href="../index.html">Login/Register</a></div>
             <div id="profile"><a href="../personal_info/edit_info.html">profile</a></div>
         </nav>
     </div>

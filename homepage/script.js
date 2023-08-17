@@ -4,7 +4,10 @@ const allMessages = document.getElementById("all-messages");
 const usernameElem = document.getElementById("username");
 const messageElem = document.getElementById("message");
 const sendBtn = document.getElementById("send-btn");
-sendBtn.onclick = updateDB;
+if(sendBtn){
+  sendBtn.onclick = updateDB;
+}
+
 
 // hompage.html
 const list = document.querySelector(".list");
@@ -12,11 +15,15 @@ const users = document.querySelector(".users");
 const profiles = document.querySelector(".profiles");
 
 const link = document.getElementById("login_home");
-const usernameInputTextField = document.getElementById("username")
+console.log(link);
+const usernameInputTextField = document.getElementById("username");
 // change the innerhtml to the username on the page using local storage
-let getUser = localStorage.getItem("username")
-link.innerHTML = getUser
-usernameInputTextField.value = getUser
+let getUser = localStorage.getItem("username");
+link.innerHTML = getUser;
+if(usernameInputTextField){
+  usernameInputTextField.value = getUser;
+}
+
 
 // edit_info.html
 const profile_info = document.getElementsByClassName("info");
