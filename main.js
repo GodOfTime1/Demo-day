@@ -12,7 +12,7 @@ console.log(confirmcreatepassword_field);
 // Login Button
 const login_BTN = document.getElementById("login_button");
 // checks if the user is currently logged in
-let userCurrentlyLoggedIn = false;
+
 // Create Account Button
 const create_BTN = document.getElementById("form_button");
 let userRef = user_db.collection("users");
@@ -25,6 +25,7 @@ login_BTN.onclick = (e) => {
   // user input
   const username = username_field.value;
   const password = password_field.value;
+
   //  get all the documents
   userRef.get().then((querySnapshot) => {
     querySnapshot.forEach((doc) => {
@@ -38,7 +39,7 @@ login_BTN.onclick = (e) => {
         arrayOfAllUsers[i] == username &&
         arrayOfAllPasswords[i] == password
       ) {
-        userCurrentlyLoggedIn = true;
+        localStorage.setItem("username",username)
         window.location.href = "homepage/homepage.html";
         break;
       } else {

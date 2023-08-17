@@ -12,6 +12,11 @@ const users = document.querySelector(".users");
 const profiles = document.querySelector(".profiles");
 
 const link = document.getElementById("login_home");
+const usernameInputTextField = document.getElementById("username")
+// change the innerhtml to the username on the page using local storage
+let getUser = localStorage.getItem("username")
+link.innerHTML = getUser
+usernameInputTextField.value = getUser
 
 // edit_info.html
 const profile_info = document.getElementsByClassName("info");
